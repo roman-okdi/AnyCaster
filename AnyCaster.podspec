@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "AnyCaster"
-  spec.version = "0.1.0"
+  spec.version = "0.1.1"
   spec.summary = "A Swift library for robust type casting and value mapping."
 
   spec.description = <<-DESC
@@ -25,7 +25,9 @@ DESC
   spec.license  = { :type => "MIT", :file => "LICENSE" }
 
   spec.authors = { "okdi" => "newmailri@gmail.com" }
-
+  
+  spec.swift_version = '5.0'
+  
   spec.ios.deployment_target = "13.0"
   spec.osx.deployment_target = "10.15"
   spec.watchos.deployment_target = "6.0"
