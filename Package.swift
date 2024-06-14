@@ -16,12 +16,15 @@ let package = Package(
             name: "AnyCaster",
             targets: ["AnyCaster"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/Quick/Nimble.git", from: "13.0.0")
+    ],
     targets: [
         .target(
             name: "AnyCaster"),
         .testTarget(
             name: "AnyCasterTests",
-            dependencies: ["AnyCaster"]),
+            dependencies: ["AnyCaster", "Nimble"]),
     ],
     swiftLanguageVersions: [.v4]
 )
