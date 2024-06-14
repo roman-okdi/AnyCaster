@@ -9,4 +9,5 @@
 public enum AnyCasterError: Error {
     case failedCast
     case skipOptional
+    case missingValue
 }
