@@ -71,4 +71,18 @@ public struct AnyCaster {
         }
         return try mapWithOptional(temp)
     }
+
+    /// Casts the wrapped value to an AnyDictionaryCaster.
+    /// - Throws: `AnyCasterError.failedCast` if the cast to dictionary fails.
+    /// - Returns: The value cast to AnyDictionaryCaster.
+    public func toDictionary() throws -> AnyDictionaryCaster {
+        return try AnyDictionaryCaster(value)
+    }
+    
+    /// Casts the wrapped value to an AnyArrayCaster.
+    /// - Throws: `AnyCasterError.failedCast` if the cast to array fails.
+    /// - Returns: The value cast to AnyArrayCaster.
+    public func toArray() throws -> AnyArrayCaster {
+        return try AnyArrayCaster(value)
+    }
 }
